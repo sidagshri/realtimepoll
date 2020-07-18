@@ -1,0 +1,33 @@
+{
+	"api": {
+		"poll": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"authConfig": {
+					"additionalAuthenticationProviders": [],
+					"defaultAuthentication": {
+						"authenticationType": "API_KEY",
+						"apiKeyConfig": {
+							"description": "Poll",
+							"apiKeyExpirationDays": 365
+						}
+					}
+				}
+			}
+		}
+	},
+	"auth": {
+		"poll9a79e97e": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	},
+	"storage": {
+		"s334d7df6d": {
+			"service": "S3",
+			"providerPlugin": "awscloudformation"
+		}
+	}
+}
